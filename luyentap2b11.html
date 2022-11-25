@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        let thueSuat;
+        let luong,sothue,luongRong=0;
+        let b1=5/100,b2=10/100,b3=15/100,b4=20/100,b5=25/100,b6=30/100,b7=35/100;
+        let tienmienthue,tiengiamtru;
+        luong=+prompt("Số tiền lương:");
+        tienmienthue=+prompt("Số tiền được miễn thuế:");
+        tiengiamtru=+prompt("Số tiền được giảm trừ:");
+        sothue=luong-tiengiamtru-tiengiamtru;
+            if(luong<=5000000){
+                thueSuat=b1;
+                luongRong=sothue*thueSuat;
+            }else if(luong<=10000000){
+                thueSuat=b2;
+                luongRong=sothue*thueSuat;
+            }else if(luong<=18000000){
+                thueSuat=b3;
+                luongRong=sothue*thueSuat;
+            }else if(luong<=32000000){
+                thueSuat=b4;
+                luongRong=sothue*thueSuat;
+            }else if(luong<=52000000){
+                thueSuat=b5;
+                luongRong=sothue*thueSuat;
+            }else if(luong<=80000000){
+                thueSuat=b6;
+                luongRong=sothue*thueSuat;
+            }else {
+                thueSuat=b7;
+                luongRong=sothue*thueSuat;
+            }if(luongRong<0){
+                alert("Không cần nộp thuế !")
+            } else{
+                alert("Số tiền thuế phải nộp là : "+luongRong);
+            }
+    </script>
+</body>
+</html>
